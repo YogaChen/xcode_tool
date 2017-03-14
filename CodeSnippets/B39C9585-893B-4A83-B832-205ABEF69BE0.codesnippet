@@ -3,26 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tq_notification_call_back</string>
+	<string>getMethodList</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)&lt;#funcName#&gt;:(NSNotification*)notification {
-    
-}</string>
+	<string>unsigned int count;
+    Method *methodList = class_copyMethodList([self class], &amp;count);
+    for (unsigned int i = 0; i &lt; count; i++) {
+        Method method = methodList[i];
+        NSLog(@"method----&gt;%@", NSStringFromSelector(method_getName(method)));
+    }
+free(methodList);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBB93C20-EE5A-44F5-B35D-854A96E88F2D</string>
+	<string>B39C9585-893B-4A83-B832-205ABEF69BE0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tq notification call back method</string>
+	<string>获取方法列表</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>tq notification call back method</string>
+	<string>获取方法列表</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

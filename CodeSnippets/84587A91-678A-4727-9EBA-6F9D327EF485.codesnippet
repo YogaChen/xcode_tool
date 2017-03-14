@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tq_notification</string>
+	<string>notification</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeExpression</string>
@@ -12,19 +12,19 @@
 	<string> [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(&lt;#methodName#&gt;) name:kLoginNotification object:nil];
   [[NSNotificationCenter defaultCenter] removeObserver:self];
   // post notification
-  NSDictionary * userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:200] forKey:@"code"];
+  NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:200] forKey:@"code"];
 [[NSNotificationCenter defaultCenter] postNotificationName:&lt;#notification_name#&gt; object:self userInfo:userInfo];
 
-- (void)&lt;#functionname#&gt;:(NSNotification*)notification
+- (void)&lt;#functionname#&gt;:(NSNotification *)notification
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>84587A91-678A-4727-9EBA-6F9D327EF485</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tq Notification sample</string>
+	<string>Notification代码</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>tq Notification sample</string>
+	<string>Notification代码</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

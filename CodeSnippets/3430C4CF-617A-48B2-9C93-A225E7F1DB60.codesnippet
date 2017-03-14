@@ -3,24 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>de</string>
+	<string>getProtocolList</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>debugMethod();</string>
+	<string>unsigned int count;
+    __unsafe_unretained Protocol **protocolList = class_copyProtocolList([self class], &amp;count);
+    for (unsigned int i = 0; i &lt; count; i++) {
+        Protocol *myProtocal = protocolList[i];
+        const char *protocolName = protocol_getName(myProtocal);
+        NSLog(@"protocol----&gt;%@", [NSString stringWithUTF8String:protocolName]);
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24C40543-FD02-442F-84F9-7D7EBAD89F21</string>
+	<string>3430C4CF-617A-48B2-9C93-A225E7F1DB60</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>debug method</string>
+	<string>获取协议列表</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>debug method</string>
+	<string>获取协议列表</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

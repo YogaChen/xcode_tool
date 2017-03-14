@@ -3,27 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tq_extension</string>
+	<string>getIvarList</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@interface &lt;#name#&gt;()
-
-@end
-</string>
+	<string>unsigned int count;
+    Ivar *ivarList = class_copyIvarList([self class], &amp;count);
+    for (unsigned int i = 0; i &lt; count; i++) {
+        Ivar myIvar = ivarList[i];
+        const char *ivarName = ivar_getName(myIvar);
+        NSLog(@"Ivar----&gt;%@", [NSString stringWithUTF8String:ivarName]);
+    }
+free(ivarList);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8D68DFE7-69E7-46E6-B4F0-F3C5EEC1BC12</string>
+	<string>BF35953A-A6C3-4CB1-8C16-967F4FBE9122</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tq add interface() extension</string>
+	<string>获取成员变量列表</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>tq add interface() extension</string>
+	<string>获取成员变量列表</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
